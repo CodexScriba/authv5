@@ -21,7 +21,7 @@ export default function Home() {
 					Simple auth service sandbox for future projects made with Auth-V5
 				</p>
 				<div>
-					<LoginButton>
+					<LoginButton asChild>
 						<Button variant="secondary" size="lg">
 							Sign in
 						</Button>
