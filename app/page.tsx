@@ -1,15 +1,33 @@
-import { Button } from '@/components/ui/button'
-import React from 'react'
+import { Poppins } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { LoginButton } from "@/components/ui/auth/login-button";
 
-const Homepage = () => {
-  return (
-    <main>
-      <div className='text-green-300'>Homepage</div>
-      <div>
-      <Button>Hello World!</Button>
-      </div>
-    </main>
-  )
+const font = Poppins({ subsets: ["latin"], weight: ["600"] });
+
+export default function Home() {
+	return (
+		<main className="flex h-screen flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+			<div className="space-y-6 text-center">
+				<h1
+					className={cn(
+						"text-6xl font-semibold text-white drop-shadow-md",
+						font.className,
+					)}
+				>
+					🔐Auth
+				</h1>
+				<p className="text-white text-lg drop-shadow-sm text-center">
+					Simple auth service sandbox for future projects made with Auth-V5
+				</p>
+				<div>
+					<LoginButton>
+						<Button variant="secondary" size="lg">
+							Sign in
+						</Button>
+					</LoginButton>
+				</div>
+			</div>
+		</main>
+	);
 }
-
-export default Homepage
