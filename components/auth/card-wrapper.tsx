@@ -1,8 +1,9 @@
 "use client";
-import { Card, CardContent, CardFooter, CardHeader } from "../card";
+import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import type React from "react";
 import { Header } from "./header";
 import { Socail } from "./social";
+import { BackButton } from "./back-button";
 
 interface CardWrapperProps {
 	children: React.ReactNode;
@@ -30,6 +31,9 @@ export const CardWrapper = ({
 					<Socail />
 				</CardFooter>
 			)}
+			<CardFooter>
+				<BackButton label={backButtonLabel} href={backButtonHref} />
+			</CardFooter>
 		</Card>
 	);
 };

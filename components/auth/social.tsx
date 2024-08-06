@@ -2,7 +2,7 @@
 
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
-import { Button } from "../button";
+import { Button } from "../ui/button";
 
 export const Socail = () => {
 	return (
